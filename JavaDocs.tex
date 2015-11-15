@@ -122,7 +122,7 @@
 \textsc{\Huge CodeRacing 2015}\\
 \vspace{0.50in}
 \textsc{\LARGE Правила}\\
-\textsc{\small Версия 0.9.5 BETA}\\
+\textsc{\small Версия 1.0.0}\\
 \vspace{2.75in}
 \includegraphics{images/mail-ru-and-ssu-logo.png}
 }
@@ -624,6 +624,7 @@ Car}}
 % {\tt double } {\bf durability},
 % {\tt double } {\bf enginePower},
 % {\tt double } {\bf wheelTurn},
+% {\tt int } {\bf nextWaypointIndex},
 % {\tt int } {\bf nextWaypointX},
 % {\tt int } {\bf nextWaypointY},
 % {\tt boolean } {\bf finishedTrack} )
@@ -660,11 +661,23 @@ Car}}
 }%end item
 \end{itemize}
 }%end item
+\divideents{getNextWaypointIndex}
+\item{\vskip -1.9ex 
+\membername{getNextWaypointIndex}
+{\tt public int {\bf getNextWaypointIndex}(  )
+\label{l31}\label{l32}}%end signature
+\begin{itemize}
+\sld
+\item{{\bf Returns} - 
+Возвращает индекс следующего ключевого тайла в массиве {\tt world.waypoints}. 
+}%end item
+\end{itemize}
+}%end item
 \divideents{getNextWaypointX}
 \item{\vskip -1.9ex 
 \membername{getNextWaypointX}
 {\tt public int {\bf getNextWaypointX}(  )
-\label{l31}\label{l32}}%end signature
+\label{l33}\label{l34}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -677,7 +690,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getNextWaypointY}
 {\tt public int {\bf getNextWaypointY}(  )
-\label{l33}\label{l34}}%end signature
+\label{l35}\label{l36}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -690,7 +703,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getNitroChargeCount}
 {\tt public int {\bf getNitroChargeCount}(  )
-\label{l35}\label{l36}}%end signature
+\label{l37}\label{l38}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -702,7 +715,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getOilCanisterCount}
 {\tt public int {\bf getOilCanisterCount}(  )
-\label{l37}\label{l38}}%end signature
+\label{l39}\label{l40}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -714,7 +727,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getPlayerId}
 {\tt public long {\bf getPlayerId}(  )
-\label{l39}\label{l40}}%end signature
+\label{l41}\label{l42}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -726,7 +739,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getProjectileCount}
 {\tt public int {\bf getProjectileCount}(  )
-\label{l41}\label{l42}}%end signature
+\label{l43}\label{l44}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -738,7 +751,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getRemainingNitroCooldownTicks}
 {\tt public int {\bf getRemainingNitroCooldownTicks}(  )
-\label{l43}\label{l44}}%end signature
+\label{l45}\label{l46}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -751,7 +764,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getRemainingNitroTicks}
 {\tt public int {\bf getRemainingNitroTicks}(  )
-\label{l45}\label{l46}}%end signature
+\label{l47}\label{l48}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -763,7 +776,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getRemainingOilCooldownTicks}
 {\tt public int {\bf getRemainingOilCooldownTicks}(  )
-\label{l47}\label{l48}}%end signature
+\label{l49}\label{l50}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -776,7 +789,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getRemainingOiledTicks}
 {\tt public int {\bf getRemainingOiledTicks}(  )
-\label{l49}\label{l50}}%end signature
+\label{l51}\label{l52}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -788,7 +801,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getRemainingProjectileCooldownTicks}
 {\tt public int {\bf getRemainingProjectileCooldownTicks}(  )
-\label{l51}\label{l52}}%end signature
+\label{l53}\label{l54}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -801,7 +814,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getTeammateIndex}
 {\tt public int {\bf getTeammateIndex}(  )
-\label{l53}\label{l54}}%end signature
+\label{l55}\label{l56}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -813,7 +826,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getType}
 {\tt public CarType {\bf getType}(  )
-\label{l55}\label{l56}}%end signature
+\label{l57}\label{l58}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -825,7 +838,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{getWheelTurn}
 {\tt public double {\bf getWheelTurn}(  )
-\label{l57}\label{l58}}%end signature
+\label{l59}\label{l60}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -838,7 +851,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{isFinishedTrack}
 {\tt public boolean {\bf isFinishedTrack}(  )
-\label{l59}\label{l60}}%end signature
+\label{l61}\label{l62}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -851,7 +864,7 @@ Car}}
 \item{\vskip -1.9ex 
 \membername{isTeammate}
 {\tt public boolean {\bf isTeammate}(  )
-\label{l61}\label{l62}}%end signature
+\label{l63}\label{l64}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1145,13 +1158,13 @@ public static final CarType JEEP\begin{itemize}\item{\vskip -.9ex Джип. Ст
 \item{\vskip -1.9ex 
 \membername{valueOf}
 {\tt public static CarType {\bf valueOf}( {\tt String } {\bf name} )
-\label{l63}\label{l64}}%end signature
+\label{l65}\label{l66}}%end signature
 }%end item
 \divideents{values}
 \item{\vskip -1.9ex 
 \membername{values}
 {\tt public static CarType[] {\bf values}(  )
-\label{l65}\label{l66}}%end signature
+\label{l67}\label{l68}}%end signature
 }%end item
 \end{itemize}
 }
@@ -1250,7 +1263,7 @@ CircularUnit}}
 % {\tt double } {\bf angle},
 % {\tt double } {\bf angularSpeed},
 % {\tt double } {\bf radius} )
-% \label{l67}\label{l68}}%end signature
+% \label{l69}\label{l70}}%end signature
 % }%end item
 % \end{itemize}
 % }
@@ -1262,7 +1275,7 @@ CircularUnit}}
 \item{\vskip -1.9ex 
 \membername{getRadius}
 {\tt public double {\bf getRadius}(  )
-\label{l69}\label{l70}}%end signature
+\label{l71}\label{l72}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1512,13 +1525,13 @@ public static final Direction DOWN\begin{itemize}\item{\vskip -.9ex Вниз$/$�
 \item{\vskip -1.9ex 
 \membername{valueOf}
 {\tt public static Direction {\bf valueOf}( {\tt String } {\bf name} )
-\label{l71}\label{l72}}%end signature
+\label{l73}\label{l74}}%end signature
 }%end item
 \divideents{values}
 \item{\vskip -1.9ex 
 \membername{values}
 {\tt public static Direction[] {\bf values}(  )
-\label{l73}\label{l74}}%end signature
+\label{l75}\label{l76}}%end signature
 }%end item
 \end{itemize}
 }
@@ -1662,7 +1675,7 @@ Game}}
 % {\tt double } {\bf oilSlickRadius},
 % {\tt int } {\bf oilSlickLifetime},
 % {\tt int } {\bf maxOiledStateDurationTicks} )
-% \label{l75}\label{l76}}%end signature
+% \label{l77}\label{l78}}%end signature
 % }%end item
 % \end{itemize}
 % }
@@ -1674,7 +1687,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getBonusMass}
 {\tt public double {\bf getBonusMass}(  )
-\label{l77}\label{l78}}%end signature
+\label{l79}\label{l80}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1686,7 +1699,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getBonusSize}
 {\tt public double {\bf getBonusSize}(  )
-\label{l79}\label{l80}}%end signature
+\label{l81}\label{l82}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1698,7 +1711,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getBuggyEngineForwardPower}
 {\tt public double {\bf getBuggyEngineForwardPower}(  )
-\label{l81}\label{l82}}%end signature
+\label{l83}\label{l84}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1711,7 +1724,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getBuggyEngineRearPower}
 {\tt public double {\bf getBuggyEngineRearPower}(  )
-\label{l83}\label{l84}}%end signature
+\label{l85}\label{l86}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1724,7 +1737,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getBuggyMass}
 {\tt public double {\bf getBuggyMass}(  )
-\label{l85}\label{l86}}%end signature
+\label{l87}\label{l88}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1736,7 +1749,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getBurningTimeDurationFactor}
 {\tt public double {\bf getBurningTimeDurationFactor}(  )
-\label{l87}\label{l88}}%end signature
+\label{l89}\label{l90}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1750,7 +1763,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarAngularSpeedFactor}
 {\tt public double {\bf getCarAngularSpeedFactor}(  )
-\label{l89}\label{l90}}%end signature
+\label{l91}\label{l92}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1764,7 +1777,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarCrosswiseMovementFrictionFactor}
 {\tt public double {\bf getCarCrosswiseMovementFrictionFactor}(  )
-\label{l91}\label{l92}}%end signature
+\label{l93}\label{l94}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1777,7 +1790,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarDamageScoreFactor}
 {\tt public double {\bf getCarDamageScoreFactor}(  )
-\label{l93}\label{l94}}%end signature
+\label{l95}\label{l96}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1791,7 +1804,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarEliminationScore}
 {\tt public int {\bf getCarEliminationScore}(  )
-\label{l95}\label{l96}}%end signature
+\label{l97}\label{l98}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1803,7 +1816,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarEnginePowerChangePerTick}
 {\tt public double {\bf getCarEnginePowerChangePerTick}(  )
-\label{l97}\label{l98}}%end signature
+\label{l99}\label{l100}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1816,7 +1829,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarHeight}
 {\tt public double {\bf getCarHeight}(  )
-\label{l99}\label{l100}}%end signature
+\label{l101}\label{l102}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1828,7 +1841,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarLengthwiseMovementFrictionFactor}
 {\tt public double {\bf getCarLengthwiseMovementFrictionFactor}(  )
-\label{l101}\label{l102}}%end signature
+\label{l103}\label{l104}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1841,7 +1854,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarMovementAirFrictionFactor}
 {\tt public double {\bf getCarMovementAirFrictionFactor}(  )
-\label{l103}\label{l104}}%end signature
+\label{l105}\label{l106}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1853,7 +1866,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarReactivationTimeTicks}
 {\tt public int {\bf getCarReactivationTimeTicks}(  )
-\label{l105}\label{l106}}%end signature
+\label{l107}\label{l108}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1866,7 +1879,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarRotationAirFrictionFactor}
 {\tt public double {\bf getCarRotationAirFrictionFactor}(  )
-\label{l107}\label{l108}}%end signature
+\label{l109}\label{l110}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1881,7 +1894,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarRotationFrictionFactor}
 {\tt public double {\bf getCarRotationFrictionFactor}(  )
-\label{l109}\label{l110}}%end signature
+\label{l111}\label{l112}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1896,7 +1909,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarWheelTurnChangePerTick}
 {\tt public double {\bf getCarWheelTurnChangePerTick}(  )
-\label{l111}\label{l112}}%end signature
+\label{l113}\label{l114}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1909,7 +1922,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getCarWidth}
 {\tt public double {\bf getCarWidth}(  )
-\label{l113}\label{l114}}%end signature
+\label{l115}\label{l116}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1921,7 +1934,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getFinishLapScore}
 {\tt public int {\bf getFinishLapScore}(  )
-\label{l115}\label{l116}}%end signature
+\label{l117}\label{l118}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1934,7 +1947,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getFinishTrackScores}
 {\tt public int[] {\bf getFinishTrackScores}(  )
-\label{l117}\label{l118}}%end signature
+\label{l119}\label{l120}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1948,7 +1961,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getInitialFreezeDurationTicks}
 {\tt public int {\bf getInitialFreezeDurationTicks}(  )
-\label{l119}\label{l120}}%end signature
+\label{l121}\label{l122}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1961,7 +1974,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getJeepEngineForwardPower}
 {\tt public double {\bf getJeepEngineForwardPower}(  )
-\label{l121}\label{l122}}%end signature
+\label{l123}\label{l124}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1974,7 +1987,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getJeepEngineRearPower}
 {\tt public double {\bf getJeepEngineRearPower}(  )
-\label{l123}\label{l124}}%end signature
+\label{l125}\label{l126}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1987,7 +2000,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getJeepMass}
 {\tt public double {\bf getJeepMass}(  )
-\label{l125}\label{l126}}%end signature
+\label{l127}\label{l128}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -1999,7 +2012,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getLapCount}
 {\tt public int {\bf getLapCount}(  )
-\label{l127}\label{l128}}%end signature
+\label{l129}\label{l130}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2012,7 +2025,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getLapTickCount}
 {\tt public int {\bf getLapTickCount}(  )
-\label{l129}\label{l130}}%end signature
+\label{l131}\label{l132}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2026,7 +2039,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getLapWaypointsSummaryScoreFactor}
 {\tt public double {\bf getLapWaypointsSummaryScoreFactor}(  )
-\label{l131}\label{l132}}%end signature
+\label{l133}\label{l134}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2039,7 +2052,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getMaxOiledStateDurationTicks}
 {\tt public int {\bf getMaxOiledStateDurationTicks}(  )
-\label{l133}\label{l134}}%end signature
+\label{l135}\label{l136}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2053,7 +2066,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getNitroDurationTicks}
 {\tt public int {\bf getNitroDurationTicks}(  )
-\label{l135}\label{l136}}%end signature
+\label{l137}\label{l138}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2065,7 +2078,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getNitroEnginePowerFactor}
 {\tt public double {\bf getNitroEnginePowerFactor}(  )
-\label{l137}\label{l138}}%end signature
+\label{l139}\label{l140}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2078,7 +2091,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getOilSlickInitialRange}
 {\tt public double {\bf getOilSlickInitialRange}(  )
-\label{l139}\label{l140}}%end signature
+\label{l141}\label{l142}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2091,7 +2104,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getOilSlickLifetime}
 {\tt public int {\bf getOilSlickLifetime}(  )
-\label{l141}\label{l142}}%end signature
+\label{l143}\label{l144}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2103,7 +2116,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getOilSlickRadius}
 {\tt public double {\bf getOilSlickRadius}(  )
-\label{l143}\label{l144}}%end signature
+\label{l145}\label{l146}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2115,7 +2128,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getPureScoreAmount}
 {\tt public int {\bf getPureScoreAmount}(  )
-\label{l145}\label{l146}}%end signature
+\label{l147}\label{l148}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2128,7 +2141,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getRandomSeed}
 {\tt public long {\bf getRandomSeed}(  )
-\label{l147}\label{l148}}%end signature
+\label{l149}\label{l150}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2142,7 +2155,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getSideWasherAngle}
 {\tt public double {\bf getSideWasherAngle}(  )
-\label{l149}\label{l150}}%end signature
+\label{l151}\label{l152}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2155,7 +2168,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getSpillOilCooldownTicks}
 {\tt public int {\bf getSpillOilCooldownTicks}(  )
-\label{l151}\label{l152}}%end signature
+\label{l153}\label{l154}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2168,7 +2181,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getThrowProjectileCooldownTicks}
 {\tt public int {\bf getThrowProjectileCooldownTicks}(  )
-\label{l153}\label{l154}}%end signature
+\label{l155}\label{l156}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2181,7 +2194,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getTickCount}
 {\tt public int {\bf getTickCount}(  )
-\label{l155}\label{l156}}%end signature
+\label{l157}\label{l158}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2196,7 +2209,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getTireDamageFactor}
 {\tt public double {\bf getTireDamageFactor}(  )
-\label{l157}\label{l158}}%end signature
+\label{l159}\label{l160}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2211,7 +2224,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getTireDisappearSpeedFactor}
 {\tt public double {\bf getTireDisappearSpeedFactor}(  )
-\label{l159}\label{l160}}%end signature
+\label{l161}\label{l162}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2225,7 +2238,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getTireInitialSpeed}
 {\tt public double {\bf getTireInitialSpeed}(  )
-\label{l161}\label{l162}}%end signature
+\label{l163}\label{l164}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2237,7 +2250,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getTireMass}
 {\tt public double {\bf getTireMass}(  )
-\label{l163}\label{l164}}%end signature
+\label{l165}\label{l166}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2249,7 +2262,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getTireRadius}
 {\tt public double {\bf getTireRadius}(  )
-\label{l165}\label{l166}}%end signature
+\label{l167}\label{l168}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2261,7 +2274,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getTrackTileMargin}
 {\tt public double {\bf getTrackTileMargin}(  )
-\label{l167}\label{l168}}%end signature
+\label{l169}\label{l170}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2274,7 +2287,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getTrackTileSize}
 {\tt public double {\bf getTrackTileSize}(  )
-\label{l169}\label{l170}}%end signature
+\label{l171}\label{l172}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2286,7 +2299,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getUseNitroCooldownTicks}
 {\tt public int {\bf getUseNitroCooldownTicks}(  )
-\label{l171}\label{l172}}%end signature
+\label{l173}\label{l174}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2299,7 +2312,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getWasherDamage}
 {\tt public double {\bf getWasherDamage}(  )
-\label{l173}\label{l174}}%end signature
+\label{l175}\label{l176}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2311,7 +2324,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getWasherInitialSpeed}
 {\tt public double {\bf getWasherInitialSpeed}(  )
-\label{l175}\label{l176}}%end signature
+\label{l177}\label{l178}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2323,7 +2336,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getWasherMass}
 {\tt public double {\bf getWasherMass}(  )
-\label{l177}\label{l178}}%end signature
+\label{l179}\label{l180}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2335,7 +2348,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getWasherRadius}
 {\tt public double {\bf getWasherRadius}(  )
-\label{l179}\label{l180}}%end signature
+\label{l181}\label{l182}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2347,7 +2360,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getWorldHeight}
 {\tt public int {\bf getWorldHeight}(  )
-\label{l181}\label{l182}}%end signature
+\label{l183}\label{l184}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2359,7 +2372,7 @@ Game}}
 \item{\vskip -1.9ex 
 \membername{getWorldWidth}
 {\tt public int {\bf getWorldWidth}(  )
-\label{l183}\label{l184}}%end signature
+\label{l185}\label{l186}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2390,7 +2403,7 @@ Move}}
 % \item{\vskip -1.9ex 
 % \membername{Move}
 % {\tt public {\bf Move}(  )
-% \label{l185}\label{l186}}%end signature
+% \label{l187}\label{l188}}%end signature
 % }%end item
 % \end{itemize}
 % }
@@ -2402,7 +2415,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{getEnginePower}
 {\tt public double {\bf getEnginePower}(  )
-\label{l187}\label{l188}}%end signature
+\label{l189}\label{l190}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2414,7 +2427,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{getWheelTurn}
 {\tt public double {\bf getWheelTurn}(  )
-\label{l189}\label{l190}}%end signature
+\label{l191}\label{l192}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2426,7 +2439,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{isBrake}
 {\tt public boolean {\bf isBrake}(  )
-\label{l191}\label{l192}}%end signature
+\label{l193}\label{l194}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2438,7 +2451,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{isSpillOil}
 {\tt public boolean {\bf isSpillOil}(  )
-\label{l193}\label{l194}}%end signature
+\label{l195}\label{l196}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2450,7 +2463,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{isThrowProjectile}
 {\tt public boolean {\bf isThrowProjectile}(  )
-\label{l195}\label{l196}}%end signature
+\label{l197}\label{l198}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2462,7 +2475,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{isUseNitro}
 {\tt public boolean {\bf isUseNitro}(  )
-\label{l197}\label{l198}}%end signature
+\label{l199}\label{l200}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2474,7 +2487,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{setBrake}
 {\tt public void {\bf setBrake}( {\tt boolean } {\bf brake} )
-\label{l199}\label{l200}}%end signature
+\label{l201}\label{l202}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -2499,7 +2512,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{setEnginePower}
 {\tt public void {\bf setEnginePower}( {\tt double } {\bf enginePower} )
-\label{l201}\label{l202}}%end signature
+\label{l203}\label{l204}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -2533,7 +2546,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{setSpillOil}
 {\tt public void {\bf setSpillOil}( {\tt boolean } {\bf spillOil} )
-\label{l203}\label{l204}}%end signature
+\label{l205}\label{l206}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -2558,7 +2571,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{setThrowProjectile}
 {\tt public void {\bf setThrowProjectile}( {\tt boolean } {\bf throwProjectile} )
-\label{l205}\label{l206}}%end signature
+\label{l207}\label{l208}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -2583,7 +2596,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{setUseNitro}
 {\tt public void {\bf setUseNitro}( {\tt boolean } {\bf useNitro} )
-\label{l207}\label{l208}}%end signature
+\label{l209}\label{l210}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -2608,7 +2621,7 @@ Move}}
 \item{\vskip -1.9ex 
 \membername{setWheelTurn}
 {\tt public void {\bf setWheelTurn}( {\tt double } {\bf wheelTurn} )
-\label{l209}\label{l210}}%end signature
+\label{l211}\label{l212}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -2672,7 +2685,7 @@ OilSlick}}
 % {\tt double } {\bf angularSpeed},
 % {\tt double } {\bf radius},
 % {\tt int } {\bf remainingLifetime} )
-% \label{l211}\label{l212}}%end signature
+% \label{l213}\label{l214}}%end signature
 % }%end item
 % \end{itemize}
 % }
@@ -2684,7 +2697,7 @@ OilSlick}}
 \item{\vskip -1.9ex 
 \membername{getRemainingLifetime}
 {\tt public int {\bf getRemainingLifetime}(  )
-\label{l213}\label{l214}}%end signature
+\label{l215}\label{l216}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2941,7 +2954,7 @@ Player}}
 % {\tt String } {\bf name},
 % {\tt boolean } {\bf strategyCrashed},
 % {\tt int } {\bf score} )
-% \label{l215}\label{l216}}%end signature
+% \label{l217}\label{l218}}%end signature
 % }%end item
 % \end{itemize}
 % }
@@ -2953,7 +2966,7 @@ Player}}
 \item{\vskip -1.9ex 
 \membername{getId}
 {\tt public long {\bf getId}(  )
-\label{l217}\label{l218}}%end signature
+\label{l219}\label{l220}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2965,7 +2978,7 @@ Player}}
 \item{\vskip -1.9ex 
 \membername{getName}
 {\tt public String {\bf getName}(  )
-\label{l219}\label{l220}}%end signature
+\label{l221}\label{l222}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2977,7 +2990,7 @@ Player}}
 \item{\vskip -1.9ex 
 \membername{getScore}
 {\tt public int {\bf getScore}(  )
-\label{l221}\label{l222}}%end signature
+\label{l223}\label{l224}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -2989,7 +3002,7 @@ Player}}
 \item{\vskip -1.9ex 
 \membername{isMe}
 {\tt public boolean {\bf isMe}(  )
-\label{l223}\label{l224}}%end signature
+\label{l225}\label{l226}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -3001,7 +3014,7 @@ Player}}
 \item{\vskip -1.9ex 
 \membername{isStrategyCrashed}
 {\tt public boolean {\bf isStrategyCrashed}(  )
-\label{l225}\label{l226}}%end signature
+\label{l227}\label{l228}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -3044,7 +3057,7 @@ Projectile}}
 % {\tt long } {\bf carId},
 % {\tt long } {\bf playerId},
 % {\tt ProjectileType } {\bf type} )
-% \label{l227}\label{l228}}%end signature
+% \label{l229}\label{l230}}%end signature
 % }%end item
 % \end{itemize}
 % }
@@ -3056,7 +3069,7 @@ Projectile}}
 \item{\vskip -1.9ex 
 \membername{getCarId}
 {\tt public long {\bf getCarId}(  )
-\label{l229}\label{l230}}%end signature
+\label{l231}\label{l232}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -3068,7 +3081,7 @@ Projectile}}
 \item{\vskip -1.9ex 
 \membername{getPlayerId}
 {\tt public long {\bf getPlayerId}(  )
-\label{l231}\label{l232}}%end signature
+\label{l233}\label{l234}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -3080,7 +3093,7 @@ Projectile}}
 \item{\vskip -1.9ex 
 \membername{getType}
 {\tt public ProjectileType {\bf getType}(  )
-\label{l233}\label{l234}}%end signature
+\label{l235}\label{l236}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -3344,13 +3357,13 @@ public static final ProjectileType TIRE\begin{itemize}\item{\vskip -.9ex Мет�
 \item{\vskip -1.9ex 
 \membername{valueOf}
 {\tt public static ProjectileType {\bf valueOf}( {\tt String } {\bf name} )
-\label{l235}\label{l236}}%end signature
+\label{l237}\label{l238}}%end signature
 }%end item
 \divideents{values}
 \item{\vskip -1.9ex 
 \membername{values}
 {\tt public static ProjectileType[] {\bf values}(  )
-\label{l237}\label{l238}}%end signature
+\label{l239}\label{l240}}%end signature
 }%end item
 \end{itemize}
 }
@@ -3450,7 +3463,7 @@ RectangularUnit}}
 % {\tt double } {\bf angularSpeed},
 % {\tt double } {\bf width},
 % {\tt double } {\bf height} )
-% \label{l239}\label{l240}}%end signature
+% \label{l241}\label{l242}}%end signature
 % }%end item
 % \end{itemize}
 % }
@@ -3462,7 +3475,7 @@ RectangularUnit}}
 \item{\vskip -1.9ex 
 \membername{getHeight}
 {\tt public double {\bf getHeight}(  )
-\label{l241}\label{l242}}%end signature
+\label{l243}\label{l244}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -3474,7 +3487,7 @@ RectangularUnit}}
 \item{\vskip -1.9ex 
 \membername{getWidth}
 {\tt public double {\bf getWidth}(  )
-\label{l243}\label{l244}}%end signature
+\label{l245}\label{l246}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -3740,6 +3753,9 @@ public static final TileType BOTTOM\_HEADED\_T\begin{itemize}\item{\vskip -.9ex 
 \item{
 public static final TileType CROSSROADS\begin{itemize}\item{\vskip -.9ex Тайл, выполняющий роль сочленения четырёх других тайлов: со всех сторон от данного тайла.}\end{itemize}
 }
+\item{
+public static final TileType UNKNOWN\begin{itemize}\item{\vskip -.9ex Тип тайла пока не известен.}\end{itemize}
+}
 \end{itemize}
 }
 \startsubsubsection{Methods}{
@@ -3748,13 +3764,13 @@ public static final TileType CROSSROADS\begin{itemize}\item{\vskip -.9ex Тай�
 \item{\vskip -1.9ex 
 \membername{valueOf}
 {\tt public static TileType {\bf valueOf}( {\tt String } {\bf name} )
-\label{l245}\label{l246}}%end signature
+\label{l247}\label{l248}}%end signature
 }%end item
 \divideents{values}
 \item{\vskip -1.9ex 
 \membername{values}
 {\tt public static TileType[] {\bf values}(  )
-\label{l247}\label{l248}}%end signature
+\label{l249}\label{l250}}%end signature
 }%end item
 \end{itemize}
 }
@@ -3852,7 +3868,7 @@ Unit}}
 % {\tt double } {\bf speedY},
 % {\tt double } {\bf angle},
 % {\tt double } {\bf angularSpeed} )
-% \label{l249}\label{l250}}%end signature
+% \label{l251}\label{l252}}%end signature
 % }%end item
 % \end{itemize}
 % }
@@ -3864,7 +3880,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getAngle}
 {\tt public final double {\bf getAngle}(  )
-\label{l251}\label{l252}}%end signature
+\label{l253}\label{l254}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -3878,7 +3894,7 @@ Unit}}
 \membername{getAngleTo}
 {\tt public double {\bf getAngleTo}( {\tt double } {\bf x},
 {\tt double } {\bf y} )
-\label{l253}\label{l254}}%end signature
+\label{l255}\label{l256}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -3905,7 +3921,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getAngleTo}
 {\tt public double {\bf getAngleTo}( {\tt Unit } {\bf unit} )
-\label{l255}\label{l256}}%end signature
+\label{l257}\label{l258}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -3929,7 +3945,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getAngularSpeed}
 {\tt public double {\bf getAngularSpeed}(  )
-\label{l257}\label{l258}}%end signature
+\label{l259}\label{l260}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -3943,7 +3959,7 @@ Unit}}
 \membername{getDistanceTo}
 {\tt public double {\bf getDistanceTo}( {\tt double } {\bf x},
 {\tt double } {\bf y} )
-\label{l259}\label{l260}}%end signature
+\label{l261}\label{l262}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -3969,7 +3985,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getDistanceTo}
 {\tt public double {\bf getDistanceTo}( {\tt Unit } {\bf unit} )
-\label{l261}\label{l262}}%end signature
+\label{l263}\label{l264}}%end signature
 \begin{itemize}
 \sld
 \item{
@@ -3992,7 +4008,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getId}
 {\tt public long {\bf getId}(  )
-\label{l263}\label{l264}}%end signature
+\label{l265}\label{l266}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4004,7 +4020,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getMass}
 {\tt public double {\bf getMass}(  )
-\label{l265}\label{l266}}%end signature
+\label{l267}\label{l268}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4016,7 +4032,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getSpeedX}
 {\tt public final double {\bf getSpeedX}(  )
-\label{l267}\label{l268}}%end signature
+\label{l269}\label{l270}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4028,7 +4044,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getSpeedY}
 {\tt public final double {\bf getSpeedY}(  )
-\label{l269}\label{l270}}%end signature
+\label{l271}\label{l272}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4040,7 +4056,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getX}
 {\tt public final double {\bf getX}(  )
-\label{l271}\label{l272}}%end signature
+\label{l273}\label{l274}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4052,7 +4068,7 @@ Unit}}
 \item{\vskip -1.9ex 
 \membername{getY}
 {\tt public final double {\bf getY}(  )
-\label{l273}\label{l274}}%end signature
+\label{l275}\label{l276}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4096,7 +4112,7 @@ World}}
 % {\tt TileType[][]} {\bf tilesXY},
 % {\tt int[][]} {\bf waypoints},
 % {\tt Direction } {\bf startingDirection} )
-% \label{l275}\label{l276}}%end signature
+% \label{l277}\label{l278}}%end signature
 % }%end item
 % \end{itemize}
 % }
@@ -4108,7 +4124,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getBonuses}
 {\tt public Bonus[] {\bf getBonuses}(  )
-\label{l277}\label{l278}}%end signature
+\label{l279}\label{l280}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4121,7 +4137,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getCars}
 {\tt public Car[] {\bf getCars}(  )
-\label{l279}\label{l280}}%end signature
+\label{l281}\label{l282}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4134,7 +4150,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getHeight}
 {\tt public int {\bf getHeight}(  )
-\label{l281}\label{l282}}%end signature
+\label{l283}\label{l284}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4146,7 +4162,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getLastTickIndex}
 {\tt public int {\bf getLastTickIndex}(  )
-\label{l283}\label{l284}}%end signature
+\label{l285}\label{l286}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4170,7 +4186,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getMapName}
 {\tt public String {\bf getMapName}(  )
-\label{l285}\label{l286}}%end signature
+\label{l287}\label{l288}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4182,7 +4198,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getMyPlayer}
 {\tt public Player {\bf getMyPlayer}(  )
-\label{l287}\label{l288}}%end signature
+\label{l289}\label{l290}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4194,7 +4210,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getOilSlicks}
 {\tt public OilSlick[] {\bf getOilSlicks}(  )
-\label{l289}\label{l290}}%end signature
+\label{l291}\label{l292}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4207,7 +4223,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getPlayers}
 {\tt public Player[] {\bf getPlayers}(  )
-\label{l291}\label{l292}}%end signature
+\label{l293}\label{l294}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4220,7 +4236,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getProjectiles}
 {\tt public Projectile[] {\bf getProjectiles}(  )
-\label{l293}\label{l294}}%end signature
+\label{l295}\label{l296}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4233,7 +4249,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getStartingDirection}
 {\tt public Direction {\bf getStartingDirection}(  )
-\label{l295}\label{l296}}%end signature
+\label{l297}\label{l298}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4245,7 +4261,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getTick}
 {\tt public int {\bf getTick}(  )
-\label{l297}\label{l298}}%end signature
+\label{l299}\label{l300}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4257,7 +4273,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getTickCount}
 {\tt public int {\bf getTickCount}(  )
-\label{l299}\label{l300}}%end signature
+\label{l301}\label{l302}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4272,7 +4288,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getTilesXY}
 {\tt public TileType {\bf getTilesXY}(  )
-\label{l301}\label{l302}}%end signature
+\label{l303}\label{l304}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4285,7 +4301,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getWaypoints}
 {\tt public int[][] {\bf getWaypoints}(  )
-\label{l303}\label{l304}}%end signature
+\label{l305}\label{l306}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4302,7 +4318,7 @@ World}}
 \item{\vskip -1.9ex 
 \membername{getWidth}
 {\tt public int {\bf getWidth}(  )
-\label{l305}\label{l306}}%end signature
+\label{l307}\label{l308}}%end signature
 \begin{itemize}
 \sld
 \item{{\bf Returns} - 
@@ -4325,13 +4341,13 @@ World}}
 \rule{\hsize}{.7mm}
 \vskip .13in
 \hbox{\bf Interfaces}
-\entityintro{Strategy}{l307}{Стратегия --- интерфейс, содержащий описание методов искусственного интеллекта кодемобиля.}
+\entityintro{Strategy}{l309}{Стратегия --- интерфейс, содержащий описание методов искусственного интеллекта кодемобиля.}
 \vskip .1in
 \rule{\hsize}{.7mm}
 \vskip .1in
 \newpage
 \section{Interfaces}{
-\startsection{Interface}{Strategy}{l307}{%
+\startsection{Interface}{Strategy}{l309}{%
 {\small Стратегия --- интерфейс, содержащий описание методов искусственного интеллекта кодемобиля.
  Каждая пользовательская стратегия должна реализовывать этот интерфейс.
  Может отсутствовать в некоторых языковых пакетах, если язык не поддерживает интерфейсы.}
@@ -4350,7 +4366,7 @@ Strategy}}
 {\tt World } {\bf world},
 {\tt Game } {\bf game},
 {\tt Move } {\bf move} )
-\label{l308}\label{l309}}%end signature
+\label{l310}\label{l311}}%end signature
 \begin{itemize}
 \sld
 \item{
